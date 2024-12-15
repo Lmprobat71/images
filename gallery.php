@@ -1,4 +1,4 @@
-<?php
+?php
 if (!isset($_GET['service'])) {
     http_response_code(400);
     echo json_encode(['error' => 'Service non spécifié.']);
@@ -6,7 +6,7 @@ if (!isset($_GET['service'])) {
 }
 
 $service = $_GET['service'];
-$directory = $_SERVER['DOCUMENT_ROOT'] . '/images/Galery/' . $service . '/';
+$directory = $_SERVER['DOCUMENT_ROOT'] . '/images' . $service . '/';
 
 // Vérifiez si le répertoire existe
 if (!is_dir($directory)) {
